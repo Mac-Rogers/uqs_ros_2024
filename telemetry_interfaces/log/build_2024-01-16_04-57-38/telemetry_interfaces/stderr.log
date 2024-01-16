@@ -1,0 +1,4 @@
+[31mCMake Error at CMakeLists.txt:17:
+  Parse error.  Expected "(", got identifier with text "export".
+
+[0m

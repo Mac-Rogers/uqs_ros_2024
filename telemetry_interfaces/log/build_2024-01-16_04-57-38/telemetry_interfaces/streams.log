@@ -1,0 +1,7 @@
+[0.717s] Invoking command in '/home/aresuser/ros2_ws/src/telemetry_interfaces/build/telemetry_interfaces': CMAKE_PREFIX_PATH=/home/aresuser/ros2_ws/install/telemetry_node:/home/aresuser/ros2_ws/install/my_robot_controller:/opt/ros/humble /usr/bin/cmake /home/aresuser/ros2_ws/src/telemetry_interfaces -DCMAKE_INSTALL_PREFIX=/home/aresuser/ros2_ws/src/telemetry_interfaces/install/telemetry_interfaces
+[0.951s] [31mCMake Error at CMakeLists.txt:17:
+[0.952s]   Parse error.  Expected "(", got identifier with text "export".
+[0.954s] 
+[0.955s] [0m
+[0.957s] -- Configuring incomplete, errors occurred!
+[0.967s] Invoked command in '/home/aresuser/ros2_ws/src/telemetry_interfaces/build/telemetry_interfaces' returned '1': CMAKE_PREFIX_PATH=/home/aresuser/ros2_ws/install/telemetry_node:/home/aresuser/ros2_ws/install/my_robot_controller:/opt/ros/humble /usr/bin/cmake /home/aresuser/ros2_ws/src/telemetry_interfaces -DCMAKE_INSTALL_PREFIX=/home/aresuser/ros2_ws/src/telemetry_interfaces/install/telemetry_interfaces

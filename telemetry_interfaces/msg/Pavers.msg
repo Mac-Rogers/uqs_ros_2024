@@ -1,0 +1,1 @@
+bool connection_status

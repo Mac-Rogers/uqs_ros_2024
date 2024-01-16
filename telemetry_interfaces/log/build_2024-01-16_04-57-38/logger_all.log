@@ -1,0 +1,79 @@
+[6.202s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build', '--packages-select', 'telemetry_interfaces']
+[6.203s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=4, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=['telemetry_interfaces'], packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x7f9da2e980>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7f9da2d930>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7f9da2d930>>)
+[6.374s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[6.374s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[6.375s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[6.375s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[6.375s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[6.375s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[6.375s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/aresuser/ros2_ws/src/telemetry_interfaces'
+[6.376s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[6.376s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[6.377s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[6.377s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[6.377s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[6.377s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[6.377s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[6.377s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[6.377s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[6.431s] DEBUG:colcon.colcon_core.package_identification:Package '.' with type 'ros.ament_cmake' and name 'telemetry_interfaces'
+[6.432s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[6.432s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[6.432s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[6.432s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[6.432s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[7.066s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[7.066s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[7.201s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 2 installed packages in /home/aresuser/ros2_ws/install
+[7.264s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 270 installed packages in /opt/ros/humble
+[7.272s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[7.871s] Level 5:colcon.colcon_core.verb:set package 'telemetry_interfaces' build argument 'cmake_args' from command line to 'None'
+[7.872s] Level 5:colcon.colcon_core.verb:set package 'telemetry_interfaces' build argument 'cmake_target' from command line to 'None'
+[7.872s] Level 5:colcon.colcon_core.verb:set package 'telemetry_interfaces' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[7.873s] Level 5:colcon.colcon_core.verb:set package 'telemetry_interfaces' build argument 'cmake_clean_cache' from command line to 'False'
+[7.873s] Level 5:colcon.colcon_core.verb:set package 'telemetry_interfaces' build argument 'cmake_clean_first' from command line to 'False'
+[7.873s] Level 5:colcon.colcon_core.verb:set package 'telemetry_interfaces' build argument 'cmake_force_configure' from command line to 'False'
+[7.873s] Level 5:colcon.colcon_core.verb:set package 'telemetry_interfaces' build argument 'ament_cmake_args' from command line to 'None'
+[7.873s] Level 5:colcon.colcon_core.verb:set package 'telemetry_interfaces' build argument 'catkin_cmake_args' from command line to 'None'
+[7.874s] Level 5:colcon.colcon_core.verb:set package 'telemetry_interfaces' build argument 'catkin_skip_building_tests' from command line to 'False'
+[7.874s] DEBUG:colcon.colcon_core.verb:Building package 'telemetry_interfaces' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/aresuser/ros2_ws/src/telemetry_interfaces/build/telemetry_interfaces', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/aresuser/ros2_ws/src/telemetry_interfaces/install/telemetry_interfaces', 'merge_install': False, 'path': '/home/aresuser/ros2_ws/src/telemetry_interfaces', 'symlink_install': False, 'test_result_base': None}
+[7.988s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[8.060s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[8.061s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/aresuser/ros2_ws/src/telemetry_interfaces' with build type 'ament_cmake'
+[8.061s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/aresuser/ros2_ws/src/telemetry_interfaces'
+[8.246s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[8.248s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[8.248s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[8.780s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/aresuser/ros2_ws/src/telemetry_interfaces/build/telemetry_interfaces': CMAKE_PREFIX_PATH=/home/aresuser/ros2_ws/install/telemetry_node:/home/aresuser/ros2_ws/install/my_robot_controller:/opt/ros/humble /usr/bin/cmake /home/aresuser/ros2_ws/src/telemetry_interfaces -DCMAKE_INSTALL_PREFIX=/home/aresuser/ros2_ws/src/telemetry_interfaces/install/telemetry_interfaces
+[9.031s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/aresuser/ros2_ws/src/telemetry_interfaces/build/telemetry_interfaces' returned '1': CMAKE_PREFIX_PATH=/home/aresuser/ros2_ws/install/telemetry_node:/home/aresuser/ros2_ws/install/my_robot_controller:/opt/ros/humble /usr/bin/cmake /home/aresuser/ros2_ws/src/telemetry_interfaces -DCMAKE_INSTALL_PREFIX=/home/aresuser/ros2_ws/src/telemetry_interfaces/install/telemetry_interfaces
+[9.060s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(telemetry_interfaces)
+[9.258s] Level 1:colcon.colcon_core.environment:checking '/home/aresuser/ros2_ws/src/telemetry_interfaces/install/telemetry_interfaces' for CMake module files
+[9.260s] Level 1:colcon.colcon_core.environment:checking '/home/aresuser/ros2_ws/src/telemetry_interfaces/install/telemetry_interfaces' for CMake config files
+[9.261s] Level 1:colcon.colcon_core.environment:checking '/home/aresuser/ros2_ws/src/telemetry_interfaces/install/telemetry_interfaces/bin'
+[9.261s] Level 1:colcon.colcon_core.environment:checking '/home/aresuser/ros2_ws/src/telemetry_interfaces/install/telemetry_interfaces/lib/pkgconfig/telemetry_interfaces.pc'
+[9.262s] Level 1:colcon.colcon_core.environment:checking '/home/aresuser/ros2_ws/src/telemetry_interfaces/install/telemetry_interfaces/lib/python3.10/site-packages'
+[9.263s] Level 1:colcon.colcon_core.environment:checking '/home/aresuser/ros2_ws/src/telemetry_interfaces/install/telemetry_interfaces/bin'
+[9.331s] INFO:colcon.colcon_core.shell:Creating package script '/home/aresuser/ros2_ws/src/telemetry_interfaces/install/telemetry_interfaces/share/telemetry_interfaces/package.ps1'
+[9.343s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/aresuser/ros2_ws/src/telemetry_interfaces/install/telemetry_interfaces/share/telemetry_interfaces/package.dsv'
+[9.349s] INFO:colcon.colcon_core.shell:Creating package script '/home/aresuser/ros2_ws/src/telemetry_interfaces/install/telemetry_interfaces/share/telemetry_interfaces/package.sh'
+[9.357s] INFO:colcon.colcon_core.shell:Creating package script '/home/aresuser/ros2_ws/src/telemetry_interfaces/install/telemetry_interfaces/share/telemetry_interfaces/package.bash'
+[9.363s] INFO:colcon.colcon_core.shell:Creating package script '/home/aresuser/ros2_ws/src/telemetry_interfaces/install/telemetry_interfaces/share/telemetry_interfaces/package.zsh'
+[9.368s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/aresuser/ros2_ws/src/telemetry_interfaces/install/telemetry_interfaces/share/colcon-core/packages/telemetry_interfaces)
+[9.379s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[9.380s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[9.380s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '1'
+[9.380s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[9.537s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[9.538s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[9.538s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[9.556s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[9.694s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/aresuser/ros2_ws/src/telemetry_interfaces/install/local_setup.ps1'
+[9.708s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/aresuser/ros2_ws/src/telemetry_interfaces/install/_local_setup_util_ps1.py'
+[9.723s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/aresuser/ros2_ws/src/telemetry_interfaces/install/setup.ps1'
+[9.897s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/aresuser/ros2_ws/src/telemetry_interfaces/install/local_setup.sh'
+[9.905s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/aresuser/ros2_ws/src/telemetry_interfaces/install/_local_setup_util_sh.py'
+[9.908s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/aresuser/ros2_ws/src/telemetry_interfaces/install/setup.sh'
+[10.039s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/aresuser/ros2_ws/src/telemetry_interfaces/install/local_setup.bash'
+[10.045s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/aresuser/ros2_ws/src/telemetry_interfaces/install/setup.bash'
+[10.151s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/aresuser/ros2_ws/src/telemetry_interfaces/install/local_setup.zsh'
+[10.154s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/aresuser/ros2_ws/src/telemetry_interfaces/install/setup.zsh'
