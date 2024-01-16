@@ -3,6 +3,7 @@
 import rclpy
 from rclpy.node import Node
 from std_msgs.msg import String
+from telemetry_interfaces.msg import MotorDrivers
 from turtlesim.msg import Pose  # Assuming turtlesim Pose message for illustration
 import socket
 import threading
@@ -12,7 +13,7 @@ class MyNode(Node):
         super().__init__('telem_node')
         self.motor_publisher = self.create_publisher(String, 'tcp_messages', 10)
         self.payload_publisher = self.create_publisher(String, 'tcp_messages', 10)
-        self.create_timer(0.1, self.timer_callback)
+        self.create_timer(1.0, self.timer_callback)
         self.turtle_pose_subscription = self.create_subscription(
             Pose,
             'turtle1/pose',  # Replace with your actual topic for turtle pose
@@ -35,19 +36,24 @@ class MyNode(Node):
         # Update the message to be sent
         self.msg = f'Turtle Pose: x={msg.x}, y={msg.y}, theta={msg.theta}'
 
-def tcp_server(host, port, ros_node):
-    server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    server_socket.bind((host, port))
-    server_socket.listen(1)
-    print(f"Server listening on {host}:{port}")
+        # Publish the received message as a ROS2 message
+        message = String()
+        message.data = self.msg
+        if message.data.split(':')[0] in ['ATLAS', 'GAIA', 'PAVERS']:
+            self.payload_publisher.publish(message)
+            self.get_logger().info(f"payload {message.data}")
+        md_cmd = MotorDrivers()
+        if message.data.split(':')[-1] == 'FWD':
+            md_cmd.lin_vel = 1
+            md_cmd.motor_status = True
+            self.motor_publisher.publish(md_cmd)
+        self.get_logger().info(f"{message.data}")
+        self.get_logger().info(f"{md_cmd}")
 
+def handle_client(client_socket, ros_node):
     while True:
-        client_socket, client_address = server_socket.accept()
-        print(f"Accepted connection from {client_address}")
-
         data = client_socket.recv(1024)
         if not data:
-            print('not cool')
             break
 
         # Publish the received message as a ROS2 message
@@ -58,6 +64,24 @@ def tcp_server(host, port, ros_node):
             ros_node.get_logger().info(f"payload {message.data}")
         ros_node.motor_publisher.publish(message)
         ros_node.get_logger().info(f"motors {message.data}")
+
+        print(f"Received from client: {data.decode('utf-8')}")
+
+    client_socket.close()
+
+def tcp_server(host, port, ros_node):
+    server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    server_socket.bind((host, port))
+    server_socket.listen(1)
+    print(f"Server listening on {host}:{port}")
+
+    while True:
+        client_socket, client_address = server_socket.accept()
+        print(f"Accepted connection from {client_address}")
+
+        # Start a new thread to handle the client
+        client_thread = threading.Thread(target=handle_client, args=(client_socket, ros_node))
+        client_thread.start()
 
         # Add the client socket to the list of connected clients
         ros_node.connected_clients.append(client_socket)
