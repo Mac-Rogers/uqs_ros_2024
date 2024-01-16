@@ -7,7 +7,7 @@ endif()
 
 # find dependencies
 find_package(ament_cmake REQUIRED)
-find_package(rosidl_defualt_generators REQUIRED)
+find_package(rosidl_default_generators REQUIRED)
 
 rosidl_generate_interfaces(${PROJECT_NAME}
 	"msg/Gaia.msg"
@@ -16,7 +16,9 @@ rosidl_generate_interfaces(${PROJECT_NAME}
   "msg/WheelVelocities.msg"
   "msg/MotorResponse.msg"
 )
-ament export dependencies(rosidl default runtime)
+
+ament_export_dependencies(rosidl_default_runtime)
+
 # uncomment the following section in order to fill in
 # further dependencies manually.
 # find_package(<dependency> REQUIRED)
