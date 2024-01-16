@@ -10,9 +10,11 @@ find_package(ament_cmake REQUIRED)
 find_package(rosidl_defualt_generators REQUIRED)
 
 rosidl_generate_interfaces(${PROJECT_NAME}
-	'msg/MotorDrivers.msg',
-	'msg/Gaia.msg',
-	'msg/Pavers.msg'
+	"msg/Gaia.msg"
+  "msg/Pavers.msg"
+  "msg/MotorCommands.msg"
+  "msg/WheelVelocities.msg"
+  "msg/MotorResponse.msg"
 )
 ament export dependencies(rosidl default runtime)
 # uncomment the following section in order to fill in
