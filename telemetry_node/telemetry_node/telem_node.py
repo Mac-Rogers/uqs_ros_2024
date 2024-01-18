@@ -77,7 +77,6 @@ class MotorServer(Node):
             self.get_logger().info(f"Published message to telem2md: {message}")
 
     def callback(self, msg):
-        # Convert the received ROS message to a string or another suitable format
         motor_data_str = f'Linear Velocity: {msg.lin_vel}, Angular Velocity: {msg.ang_vel}'
         if self.client_connected:
             try:
@@ -102,8 +101,8 @@ class MotorServer(Node):
 
 def main(args=None):
     rclpy.init(args=args)
-    ip = '192.168.0.28'  # Replace with the desired IP address
-    port = 4040  # Replace with the desired port number
+    ip = '192.168.0.28' #IP address of the main Rpi, same for basestation
+    port = 4040  
     motor_server = MotorServer(ip, port)
     rclpy.spin(motor_server)
     motor_server.destroy_node()
